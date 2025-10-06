@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameHub - Discover and explore the world's most popular games">
+    <title>GameHub - Discover Amazing Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 主页 -->
+    <div id="homePage">
+        <!-- 导航栏 -->
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo" role="heading" aria-level="1">
+                    GameHub
+                </div>
+                <div class="search-container">
+                    <label for="searchInput" class="visually-hidden">Search for games</label>
+                    <span class="search-icon" aria-hidden="true"></span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search for games..."
+                        aria-label="Search for games"
+                        autocomplete="off">
+                </div>
+                <button 
+                    class="search-btn" 
+                    id="searchBtn"
+                    aria-label="Search games">
+                    Search
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero 区域 -->
+        <header class="hero" role="banner">
+            <div class="hero-content">
+                <h1 class="fade-in">Discover Amazing Games</h1>
+                <p class="fade-in-delay">Explore thousands of exciting games and find your next favorite</p>
+            </div>
+        </header>
+
+        <!-- filter -->
+        <section class="filters" aria-label="Filter games">
+            <div class="filter-label" aria-hidden="true">
+                Filters:
+            </div>
+            <label for="platformFilter" class="visually-hidden">Filter by platform</label>
+            <select id="platformFilter" class="filter-select" aria-label="Platform filter">
+                <option value="">All Platforms</option>
+                <option value="4">PC</option>
+                <option value="187">PlayStation 5</option>
+                <option value="1">Xbox One</option>
+                <option value="7">Nintendo Switch</option>
+            </select>
+            <label for="ratingFilter" class="visually-hidden">Filter by rating</label>
+            <select id="ratingFilter" class="filter-select" aria-label="Rating filter">
+                <option value="">All Ratings</option>
+                <option value="4">4+ Stars</option>
+                <option value="4.5">4.5+ Stars</option>
+            </select>
+        </section>
+
+        <!-- 游戏列表 -->
+        <main class="games-section">
+            <h2 class="section-title">Popular Games</h2>
+            <div 
+                id="gamesGrid" 
+                class="games-grid"
+                role="list"
+                aria-label="Games list"></div>
+            <div 
+                id="loading" 
+                class="loading" 
+                style="display: none;"
+                role="status"
+                aria-live="polite"
+                aria-label="Loading games">
+                <div class="spinner"></div>
+                <span class="visually-hidden">Loading games...</span>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer role="contentinfo">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>GameHub</h3>
+                    <p>Discover and explore the world's most popular games. A modern game discovery platform built with RAWG API.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" aria-label="About us">About Us</a></li>
+                        <li><a href="#" aria-label="Contact">Contact</a></li>
+                        <li><a href="#" aria-label="Privacy policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#" aria-label="Forum">Forum</a></li>
+                        <li><a href="#" aria-label="Developers">Developers</a></li>
+                        <li><a href="#" aria-label="API Documentation">API Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 GameHub. Data powered by RAWG API.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 详情页 -->
+    <div id="detailPage" class="detail-page" role="dialog" aria-modal="true" aria-labelledby="gameTitle"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
